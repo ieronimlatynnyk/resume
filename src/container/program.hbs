@@ -1,0 +1,93 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+  {{#with program}}
+  {{#with excursion}}
+
+  <h1>{{name}}</h1>
+
+  <p>location: {{location.city}}, {{location.country}}</p>
+
+  <p>date: {{date}}</p>
+
+  <hr>
+
+  {{#each program}}
+
+  <h2>{{name}}</h2>
+
+  <p>type: {{type}}</p>
+
+  <p>duration: {{duration}}</p>
+
+  <p>{{details.venue.name}}</p>
+
+  <p>{{details.venue.location.address}}</p>
+
+  <p>{{details.venue.location.city}}</p>
+
+  <p>{{details.venue.location.country}}</p>
+  {{#with details}}
+  {{#with museum}}
+  <p>{{name}}</p>
+
+  {{#with location}}
+  <p>address: {{address}}</p>
+
+  <p>city: {{city}}</p>
+
+  <p>country: {{country}}</p>
+  {{/with}}
+
+  <h2>Exhibits</h2>
+  {{#each exhibits}}
+  <h3>{{name}}</h3>
+
+  <p>{{artist}}</p>
+
+  {{#unless artist}}
+  artist: unknown
+  {{else}}
+  <div>artist: {{artist}}</div>
+  {{/unless}}
+
+  <p>{{description}}</p>
+
+  {{/each}}
+
+  
+
+  {{/with}}
+  
+  {{#each performers}}
+  <h2>Performers</h2>
+   <p>{{name}}</p>
+
+   <p>{{type}}</p>
+  {{/each}}
+
+  <h2>Guide</h2>
+  {{#with guide}}
+  <p>{{name}}</p>
+
+  <p>{{language}}</p>
+
+  <p>rating: {{rating}}</p>
+  {{/with}}
+  {{/with}}
+  {{/each}}
+
+  
+  {{/with}}
+  {{/with}}
+
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
