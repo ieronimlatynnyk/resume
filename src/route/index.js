@@ -436,10 +436,17 @@ router.get('/bio', function (req, res) {
 // ================================================================
 
 
+
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'basic',
+
+router.get('/program', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('program', {
+    layout: 'program',
+
 
     program: {
       excursion: {
@@ -522,6 +529,7 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
+
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -653,6 +661,7 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
+
 
 
 // Підключаємо роутер до бек-енду
