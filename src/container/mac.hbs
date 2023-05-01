@@ -1,0 +1,95 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+  <h1>{{name}}</h1>
+  <p>Description: {{description}}</p>
+  <p>price: {{price}}</p>
+  <p>ctaegory: {{category}}</p>
+
+  <br>
+
+  {{#with features}}
+    <h3>Processor:</h3>
+    <p>brand: {{processor.brand}}</p>
+    <p>model: {{processor.model}}</p>
+    <p>speed: {{processor.speed}}</p>
+    <p>cores: {{processor.cores}}</p>
+    <p>cache: {{processor.cache}}</p>
+
+    <br>
+
+    <h3>Memory:</h3>
+    <p>type: {{memory.type}}</p>
+    <p>size: {{memory.size}}</p>
+    <p>speed: {{memory.speed}}</p>
+
+    <br>
+
+    <h3>Storage:</h3>
+    <p>type: {{storage.type}}</p>
+    <p>size: {{storage.size}}</p>
+
+    <br>
+
+    <h3>Display:</h3>
+    <p>size: {{display.size}}</p>
+    <p>resolution: {{display.resolution}}</p>
+    <p>technology: {{display.technology}}</p>
+    <p>color space: {{display.color_space}}</p>
+    <p>brightness: {{display.brightness}}</p>
+    <p>refresh rate: {{display.refresh_rate}}</p>
+
+    <br>
+
+    <h3>Graphics:</h3>
+    <p>brand: {{graphics.brand}}</p>
+    <p>model: {{graphics.model}}</p>
+    <p>memory: {{graphics.memory}}</p>
+
+    <br>
+
+      <h3>Ports:</h3>
+      <p>type: {{ports.[0].type}}</p>
+      <p>count: {{ports.[0].count}}</p>
+      <p>features: {{ports.[0].features}}</p>
+      <p>type: {{ports.[1].type}}</p>
+      <p>count: {{ports.[1].count}}</p>
+
+    <br>
+
+      <h3>Battery:</h3>
+      <p>type: {{battery.type}}</p>
+      <p>capacity: {{battery.capacity}}</p>
+      <p>life: {{battery.life}}</p>
+
+      <br>
+
+      <p>weight: {{weight}}</p>
+      <h3>Dimension:</h3>
+      <p>height: {{dimensions.height}}</p>
+      <p>widht: {{dimensions.width}}</p>
+      <p>depth: {{dimensions.depth}}</p>
+
+      <br>
+
+      <p>operating system: {{operating_system}}</p>
+      
+      <h3>Accessories:</h3>
+      <ul>      
+      <li><p>name: {{accessories.[0].name}}</p></li>
+      <p>price: {{accessories.[0].price}}</p>
+      <li><p>name: {{accessories.[1].name}}</p></li>
+      <p>price: {{accessories.[1].price}}</p>
+      <li><p>name: {{accessories.[2].name}}</p></li>
+      <p>price: {{accessories.[2].price}}</p>
+      </ul>
+  {{/with}}
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
