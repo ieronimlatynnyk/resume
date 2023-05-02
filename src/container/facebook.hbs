@@ -1,0 +1,158 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+ <h1>{{name}}</h1>
+  <h2>User1:</h2>
+  <p>id: {{users.[0].id}}</p>
+  <p>name: {{users.[0].name}}</p>
+  <p>gender: {{users.[0].gender}}</p>
+  <p>age: {{users.[0].age}}</p>
+
+  <br>
+
+  <h3>Friends</h3>
+    <ul>
+    <li><p>id: {{users.[0].friends.[0].id}}</p></li>
+    <p>name: {{users.[0].friends.[0].name}}</p>
+    <p>gender: {{users.[0].friends.[0].gender}}</p>
+    <p>age: {{users.[0].friends.[0].age}}</p>
+
+    <li><p>id: {{users.[0].friends.[1].id}}</p></li>
+    <p>name: {{users.[0].friends.[1].name}}</p>
+    <p>gender: {{users.[0].friends.[1].gender}}</p>
+    <p>age: {{users.[0].friends.[1].age}}</p>
+    </ul>
+    <br>
+
+    <h3>Mutual friends</h3>
+    <ul>
+    <li><p>id: {{users.[0].friends.[0].mutual_friends.[0].id}}</p></li>
+    <p>name: {{users.[0].friends.[0].mutual_friends.[0].name}}</p>
+    <p>gender: {{users.[0].friends.[0].mutual_friends.[0].gender}}</p>
+    <p>age: {{users.[0].friends.[0].mutual_friends.[0].age}}</p>
+
+    <li><p>id: {{users.[0].friends.[1].mutual_friends.[0].id}}</p></li>
+    <p>name: {{users.[0].friends.[1].mutual_friends.[0].name}}</p>
+    <p>gender: {{users.[0].friends.[1].mutual_friends.[0].gender}}</p>
+    <p>age: {{users.[0].friends.[1].mutual_friends.[0].age}}</p>
+    </ul>
+
+    <br>
+
+    <h3>Groups</h3>
+    
+    <p>id: {{users.[0].groups.[0].id}}</p>
+    <p>name: {{users.[0].groups.[0].name}}</p>
+    <p>description: {{users.[0].groups.[0].description}}</p>
+
+    <h3>Members:</h3>
+    <p>id: {{users.[0].groups.[0].members.[0].id}}</p>
+    <p>name: {{users.[0].groups.[0].members.[0].name}}</p>
+    <p>gender: {{users.[0].groups.[0].members.[0].gender}}</p>
+    <p>age: {{users.[0].groups.[0].members.[0].age}}</p>
+ 
+     <br>
+
+    <h3>Groups</h3>
+
+    <p>id: {{users.[0].groups.[1].id}}</p>
+    <p>name: {{users.[0].groups.[1].name}}</p>
+    <p>description: {{users.[0].groups.[1].description}}</p>
+
+    <h3>Members:</h3>
+    <ul>
+    <li><p>id: {{users.[0].groups.[1].members.[0].id}}</p></li>
+    <p>name: {{users.[0].groups.[1].members.[0].name}}</p>
+    <p>gender: {{users.[0].groups.[1].members.[0].gender}}</p>
+    <p>age: {{users.[0].groups.[1].members.[0].age}}</p>
+
+    <li><p>id: {{users.[0].groups.[1].members.[1].id}}</p></li>
+    <p>name: {{users.[0].groups.[1].members.[1].name}}</p>
+    <p>gender: {{users.[0].groups.[1].members.[1].gender}}</p>
+    <p>age: {{users.[0].groups.[1].members.[1].age}}</p>
+
+    <hr>
+
+    <h2>User2:</h2>
+    <p>id: {{users.[1].id}}</p>
+    <p>name: {{users.[1].name}}</p>
+    <p>gender: {{users.[1].gender}}</p>
+    <p>age: {{users.[1].age}}</p>
+
+    
+  <h3>Friends</h3>
+    
+    <p>id: {{users.[1].friends.[0].id}}</p>
+    <p>name: {{users.[1].friends.[0].name}}</p>
+    <p>gender: {{users.[1].friends.[0].gender}}</p>
+    <p>age: {{users.[1].friends.[0].age}}</p>
+    
+    <br>
+
+    <h3>Mutual friends</h3>
+    <ul>
+    <li><p>id: {{users.[1].friends.[0].mutual_friends.[0].id}}</p></li>
+    <p>name: {{users.[1].friends.[0].mutual_friends.[0].name}}</p>
+    <p>gender: {{users.[1].friends.[0].mutual_friends.[0].gender}}</p>
+    <p>age: {{users.[1].friends.[0].mutual_friends.[0].age}}</p>
+
+    <li><p>id: {{users.[1].friends.[0].mutual_friends.[1].id}}</p></li>
+    <p>name: {{users.[1].friends.[0].mutual_friends.[1].name}}</p>
+    <p>gender: {{users.[1].friends.[0].mutual_friends.[1].gender}}</p>
+    <p>age: {{users.[1].friends.[0].mutual_friends.[1].age}}</p>
+    </ul>
+
+    <h3>Mutual friends:</h3>
+    <p>id: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].id}}</p>
+    <p>name: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].name}}</p>
+    <p>gender: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].gender}}</p>
+    <p>age: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].age}}</p>
+
+    <br>
+
+    <h3>Groups</h3>
+    
+    <p>id: {{users.[1].friends.[0].groups.[0].id}}</p>
+    <p>name: {{users.[1].friends.[0].groups.[0].name}}</p>
+    <p>description: {{users.[1].friends.[0].groups.[0].description}}</p>
+
+    <h3>Members:</h3>
+    <p>id: {{users.[1].friends.[0].groups.[0].members.[0].id}}</p>
+    <p>name: {{users.[1].friends.[0].groups.[0].members.[0].name}}</p>
+    <p>gender: {{users.[1].friends.[0].groups.[0].members.[0].gender}}</p>
+    <p>age: {{users.[1].friends.[0].groups.[0].members.[0].age}}</p>
+ 
+     <br>
+
+    <h3>Groups</h3>
+
+    <p>id: {{users.[1].friends.[0].groups.[1].id}}</p>
+    <p>name: {{users.[1].friends.[0].groups.[1].name}}</p>
+    <p>description: {{users.[1].friends.[0].groups.[1].description}}</p>
+
+    <h3>Members:</h3>
+    <ul>
+    <li><p>id: {{users.[1].friends.[0].groups.[1].members.[0].id}}</p></li>
+    <p>name: {{users.[1].friends.[0].groups.[1].members.[0].name}}</p>
+    <p>gender: {{users.[1].friends.[0].groups.[1].members.[0].gender}}</p>
+    <p>age: {{users.[1].friends.[0].groups.[1].members.[0].age}}</p>
+
+    <li><p>id: {{users.[1].friends.[0].groups.[1].members.[1].id}}</p></li>
+    <p>name: {{users.[1].friends.[0].groups.[1].members.[1].name}}</p>
+    <p>gender: {{users.[1].friends.[0].groups.[1].members.[1].gender}}</p>
+    <p>age: {{users.[1].friends.[0].groups.[1].members.[1].age}}</p>
+      
+
+
+
+
+   </ul>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
