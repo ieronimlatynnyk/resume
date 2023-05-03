@@ -5,148 +5,165 @@
 
 <div>
  <h1>{{name}}</h1>
+ 
+  {{#each users}}
+  
   <h2>User1:</h2>
-  <p>id: {{users.[0].id}}</p>
-  <p>name: {{users.[0].name}}</p>
-  <p>gender: {{users.[0].gender}}</p>
-  <p>age: {{users.[0].age}}</p>
+  <p>id: {{id}}</p>
+  <p>name: {{name}}</p>
+  <p>gender: {{gender}}</p>
+  <p>age: {{age}}</p>
 
   <br>
-
+  {{#each friends}}
   <h3>Friends</h3>
     <ul>
-    <li><p>id: {{users.[0].friends.[0].id}}</p></li>
-    <p>name: {{users.[0].friends.[0].name}}</p>
-    <p>gender: {{users.[0].friends.[0].gender}}</p>
-    <p>age: {{users.[0].friends.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
 
-    <li><p>id: {{users.[0].friends.[1].id}}</p></li>
-    <p>name: {{users.[0].friends.[1].name}}</p>
-    <p>gender: {{users.[0].friends.[1].gender}}</p>
-    <p>age: {{users.[0].friends.[1].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
     </ul>
     <br>
-
+    {{#each mutual_friends}}
     <h3>Mutual friends</h3>
     <ul>
-    <li><p>id: {{users.[0].friends.[0].mutual_friends.[0].id}}</p></li>
-    <p>name: {{users.[0].friends.[0].mutual_friends.[0].name}}</p>
-    <p>gender: {{users.[0].friends.[0].mutual_friends.[0].gender}}</p>
-    <p>age: {{users.[0].friends.[0].mutual_friends.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
 
-    <li><p>id: {{users.[0].friends.[1].mutual_friends.[0].id}}</p></li>
-    <p>name: {{users.[0].friends.[1].mutual_friends.[0].name}}</p>
-    <p>gender: {{users.[0].friends.[1].mutual_friends.[0].gender}}</p>
-    <p>age: {{users.[0].friends.[1].mutual_friends.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
     </ul>
+    {{/each}}
+    {{/each}}
 
     <br>
-
+    {{#each groups}}
     <h3>Groups</h3>
     
-    <p>id: {{users.[0].groups.[0].id}}</p>
-    <p>name: {{users.[0].groups.[0].name}}</p>
-    <p>description: {{users.[0].groups.[0].description}}</p>
-
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>description: {{description}}</p>
+    {{#each members}}
     <h3>Members:</h3>
-    <p>id: {{users.[0].groups.[0].members.[0].id}}</p>
-    <p>name: {{users.[0].groups.[0].members.[0].name}}</p>
-    <p>gender: {{users.[0].groups.[0].members.[0].gender}}</p>
-    <p>age: {{users.[0].groups.[0].members.[0].age}}</p>
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+    {{/each}}
+    {{/each}}
  
      <br>
-
+    {{#each groups}}
     <h3>Groups</h3>
-
-    <p>id: {{users.[0].groups.[1].id}}</p>
-    <p>name: {{users.[0].groups.[1].name}}</p>
-    <p>description: {{users.[0].groups.[1].description}}</p>
-
+     
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>description: {{description}}</p>
+    {{#each members}}
     <h3>Members:</h3>
     <ul>
-    <li><p>id: {{users.[0].groups.[1].members.[0].id}}</p></li>
-    <p>name: {{users.[0].groups.[1].members.[0].name}}</p>
-    <p>gender: {{users.[0].groups.[1].members.[0].gender}}</p>
-    <p>age: {{users.[0].groups.[1].members.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
 
-    <li><p>id: {{users.[0].groups.[1].members.[1].id}}</p></li>
-    <p>name: {{users.[0].groups.[1].members.[1].name}}</p>
-    <p>gender: {{users.[0].groups.[1].members.[1].gender}}</p>
-    <p>age: {{users.[0].groups.[1].members.[1].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+    {{/each}}
+    {{/each}}
 
     <hr>
-
-    <h2>User2:</h2>
-    <p>id: {{users.[1].id}}</p>
-    <p>name: {{users.[1].name}}</p>
-    <p>gender: {{users.[1].gender}}</p>
-    <p>age: {{users.[1].age}}</p>
-
     
+    <h2>User2:</h2>
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+
+    {{#each friends}}
   <h3>Friends</h3>
     
-    <p>id: {{users.[1].friends.[0].id}}</p>
-    <p>name: {{users.[1].friends.[0].name}}</p>
-    <p>gender: {{users.[1].friends.[0].gender}}</p>
-    <p>age: {{users.[1].friends.[0].age}}</p>
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
     
     <br>
-
+    {{#each mutual_friends}}
     <h3>Mutual friends</h3>
     <ul>
-    <li><p>id: {{users.[1].friends.[0].mutual_friends.[0].id}}</p></li>
-    <p>name: {{users.[1].friends.[0].mutual_friends.[0].name}}</p>
-    <p>gender: {{users.[1].friends.[0].mutual_friends.[0].gender}}</p>
-    <p>age: {{users.[1].friends.[0].mutual_friends.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
 
-    <li><p>id: {{users.[1].friends.[0].mutual_friends.[1].id}}</p></li>
-    <p>name: {{users.[1].friends.[0].mutual_friends.[1].name}}</p>
-    <p>gender: {{users.[1].friends.[0].mutual_friends.[1].gender}}</p>
-    <p>age: {{users.[1].friends.[0].mutual_friends.[1].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
     </ul>
-
+    {{#each mutual_friends}}
     <h3>Mutual friends:</h3>
-    <p>id: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].id}}</p>
-    <p>name: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].name}}</p>
-    <p>gender: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].gender}}</p>
-    <p>age: {{users.[1].friends.[0].mutual_friends.[1].mutual_friends.[0].age}}</p>
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+    {{/each}}
+    {{/each}}
+    
 
     <br>
-
+    {{#each groups}}
     <h3>Groups</h3>
     
-    <p>id: {{users.[1].friends.[0].groups.[0].id}}</p>
-    <p>name: {{users.[1].friends.[0].groups.[0].name}}</p>
-    <p>description: {{users.[1].friends.[0].groups.[0].description}}</p>
-
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>description: {{description}}</p>
+    {{#each members}}
     <h3>Members:</h3>
-    <p>id: {{users.[1].friends.[0].groups.[0].members.[0].id}}</p>
-    <p>name: {{users.[1].friends.[0].groups.[0].members.[0].name}}</p>
-    <p>gender: {{users.[1].friends.[0].groups.[0].members.[0].gender}}</p>
-    <p>age: {{users.[1].friends.[0].groups.[0].members.[0].age}}</p>
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+    {{/each}}
+    {{/each}}
  
      <br>
-
+    {{#each groups}}
     <h3>Groups</h3>
 
-    <p>id: {{users.[1].friends.[0].groups.[1].id}}</p>
-    <p>name: {{users.[1].friends.[0].groups.[1].name}}</p>
-    <p>description: {{users.[1].friends.[0].groups.[1].description}}</p>
-
+    <p>id: {{id}}</p>
+    <p>name: {{name}}</p>
+    <p>description: {{description}}</p>
+    {{#each members}}
     <h3>Members:</h3>
     <ul>
-    <li><p>id: {{users.[1].friends.[0].groups.[1].members.[0].id}}</p></li>
-    <p>name: {{users.[1].friends.[0].groups.[1].members.[0].name}}</p>
-    <p>gender: {{users.[1].friends.[0].groups.[1].members.[0].gender}}</p>
-    <p>age: {{users.[1].friends.[0].groups.[1].members.[0].age}}</p>
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
 
-    <li><p>id: {{users.[1].friends.[0].groups.[1].members.[1].id}}</p></li>
-    <p>name: {{users.[1].friends.[0].groups.[1].members.[1].name}}</p>
-    <p>gender: {{users.[1].friends.[0].groups.[1].members.[1].gender}}</p>
-    <p>age: {{users.[1].friends.[0].groups.[1].members.[1].age}}</p>
-      
-
-
+    <li><p>id: {{id}}</p></li>
+    <p>name: {{name}}</p>
+    <p>gender: {{gender}}</p>
+    <p>age: {{age}}</p>
+    {{/each}}
+    {{/each}}
+    {{/each}}
+    
+    {{/each}}
+    
 
 
    </ul>
