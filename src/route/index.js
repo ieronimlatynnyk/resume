@@ -1233,5 +1233,16 @@ router.get('/task22', function (req, res) {
 
 // ================================================================
 
+router.get('/Test', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('Test', {
+    layout: 'bootstrap',
+  })
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
