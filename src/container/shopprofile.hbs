@@ -1,0 +1,200 @@
+{{!
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div class='m-4'>
+  {{#with navigation}}
+    <div class='card'>
+      {{#each links}}
+        <div class='card-body'>
+          <a href='{{href}}' class='nav-link'>{{text}}</a>
+        </div>
+      {{/each}}
+    </div>
+  {{/with}}
+  <br />
+  <br />
+  <h3>{{header}}</h3>
+  {{#with purchase}}
+    <div class='col-12'>
+      <div class='nav nav-tabs'>
+        <div class='nav-item'>
+          <a href='#' class='nav-link active'>{{tabs.[0]}}</a>
+        </div>
+        <div class='nav-item'>
+          <a href='#' class='nav-link'>{{tabs.[1]}}</a>
+        </div>
+      </div>
+    </div>
+    {{#with actionBlock}}
+      <div class='col-3 my-3'>
+        <input class='form-control form-control' />
+      </div>
+      <btn
+        class='btn btn-success'
+        href='{{buttons.0.link}}'
+      >{{buttons.0.text}}</btn>
+      <btn
+        class='btn btn-outline-success'
+        href='{{buttons.1.link}}'
+      >{{buttons.1.text}}</btn>
+      <btn
+        class='btn btn-outline-danger'
+        href='{{buttons.2.link}}'
+      >{{buttons.2.text}}</btn>
+      <hr />
+    {{/with}}
+
+    {{#each itemList}}
+      {{number}}
+      <p>{{status}}</p>
+      {{#with amount}}
+        <p>{{title}}</p>
+        <h5>{{value}}</h5>
+      {{/with}}
+      {{#each images}}
+        <div class='row my-2'>
+          <img
+            class='col-2'
+            src='{{this}}'
+            alt='Product photo'
+          />
+        </div>
+      {{/each}}
+      <btn
+        class='btn btn-primary'
+        href='{{button.link}}'
+      >{{button.text}}</btn>
+      <hr />
+    {{/each}}
+  {{/with}}
+  <br />
+  <hr class='gy-4' />
+  {{#with userInfo}}
+    <h3>{{title}}</h3>
+    <div class='card'>
+      <div class='card-body'>
+        {{#with profileData}}
+          <h4>{{title}}</h4>
+          <div class='card'>
+            <div class='card-body'>
+              {{#with fullName}}
+                <text>{{surname.title}}</text>
+                <p>{{surname.value}}</p>
+                <text>{{name.title}}</text>
+                <p>{{name.value}}</p>
+                <text>{{middleName.title}}</text>
+                <p>{{middleName.value}}</p>
+              {{/with}}
+            </div>
+          </div>
+          <br />
+          <div class='card'>
+            <div class='card-body'>
+              {{#with otherInfo}}
+                {{birthday.title}}
+                <p>{{birthday.value}}</p>
+                {{sex.title}}
+                <p>{{sex.value}}</p>
+                {{language.title}}
+                <p>{{language.value}}</p>
+              {{/with}}
+            </div>
+          </div>
+        {{/with}}
+        <br />
+        <div class='card'>
+          <div class='card-body'>
+            <btn
+              class='btn btn-primary'
+              href='{{buttons.0.link}}'
+            >{{buttons.0.text}}</btn>
+            <btn
+              class='btn btn-outline-secondary mx-5'
+              href='buttons.[1].link'
+            >{{buttons.1.text}}</btn>
+            <btn
+              class='btn btn-outline-danger'
+              href='buttons.[2].link'
+            >{{buttons.2.text}}</btn>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    {{#with recipients}}
+      <div class='card'>
+        <div class='card-body'>
+          <h3>{{title}}</h3>
+          <div class='row'>
+            <div class='card col-4 mx-3'>
+              <div class='card-body'>
+              <strong>{{users.[0].name}}</strong>
+              <p>{{users.[0].phone}}</p>
+              <btn class="btn btn-primary" href="{{users.[0].button.link}}">{{users.[0].button.text}}</btn>
+              </div>
+            </div>
+            <div class='card col-4 mx-3'>
+              <div class='card-body'>
+              <strong>{{users.[1].name}}</strong>
+              <p>{{users.[1].phone}}</p>
+              <btn class="btn btn-primary" href="{{users.[1].button.link}}">{{users.[1].button.text}}</btn>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/with}}
+    <br>
+    {{#with contacts}}
+    <div class="card">
+      <div class="card-body">
+        <h3>{{title}}</h3>
+        <div class="row">
+          <div class='card col-3 mx-3'>
+              <div class='card-body'>
+              <strong>{{contactData.[0].title}}</strong>
+              <p>{{contactData.[0].value}}</p>
+              <btn class="btn btn-primary" href="{{contactData.[0].button.link}}">{{contactData.[0].button.text}}</btn>
+              </div>
+            </div>
+            <div class='card col-3 mx-3'>
+              <div class='card-body'>
+              <strong>{{contactData.[1].title}}</strong>
+              <p>{{contactData.[1].value}}</p>
+              <btn class="btn btn-outline-secondary" href="{{contactData.[1].button.link}}">{{contactData.[1].button.text}}</btn>
+              </div>
+            </div>
+            <div class='card col-3 mx-3'>
+              <div class='card-body'>
+              <strong>{{contactData.[2].title}}</strong>
+              <p>{{contactData.[2].value}}</p>
+              <btn class="btn btn-outline-danger" href="{{contactData.[2].button.link}}">{{contactData.[2].button.text}}</btn>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {{/with}}   
+  {{/with}}
+  <hr>
+  <div class="row">
+  {{#each footer}}
+   <div class="nav col-2">
+    <div>
+      {{#each this}}
+       <div>
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+       </div>
+      {{/each}}
+    </div>
+   </div>
+  {{/each}}
+  </div>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
