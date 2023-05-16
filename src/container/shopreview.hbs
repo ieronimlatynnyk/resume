@@ -1,0 +1,189 @@
+{{!
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div class='m-4'>
+  
+  {{#with navigation}}
+    <div class='card'>
+      {{#each links}}
+        <div class='card-body'>
+          <a href='{{href}}' class='nav-link'>{{text}}</a>
+        </div>
+      {{/each}}
+    </div>
+  {{/with}}
+  <br />
+  <br />
+  <div class="row">
+   
+   
+    <div class="col-9">
+  {{#with formBlock}}
+    <h2>{{header}}</h2>
+    <br />
+    {{rating.title}}
+    {{rating.value}}
+    <br />
+    <br />
+    {{#with actionBlock}}
+      <div>
+        <div class='nav nav-tabs'>
+          <div class='nav-item'>
+            <a href='#' class='nav-link'>{{tabs.[0].text}}</a>
+          </div>
+          <div class='nav-item'>
+            <a href='#' class='nav-link'>{{tabs.[1].text}}</a>
+          </div>
+           <div class='nav-item'>
+            <a href='#' class='nav-link active'>{{tabs.[2].text}}</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+      {{#with report}}
+      <div class="card ">
+        <div class="card-body">
+        <p>{{title}}</p>
+        <btn class="btn btn-dark" href="{{button.link}}">{{button.text}}</btn>
+        </div>                      
+      </div>
+      {{/with}}
+    {{/with}}
+    <br>
+    <br>
+    <hr>
+    {{#with feedbackBlock}}
+    <h3 >{{title}}</h3>
+    <br>
+    <btn class="btn btn-warning" href="{{buttons.[0].link}}">{{buttons.[0].text}}</btn>
+    <btn class="btn btn-success" href="{{buttons.[1].link}}">{{buttons.[1].text}}</btn>
+    <btn class="btn btn-danger" href="{{buttons.[2].link}}">{{buttons.[2].text}}</btn>
+    {{/with}}
+    <br>
+    <br>
+    
+   
+    </div>
+  
+
+     <div class="col-3">
+    {{#with goodsInfo}}
+    
+      <br>
+    <div class="card">
+      <div class="card-body">
+      <img class="crad-img-top" src="{{photo}}">
+      <p>{{name}}</p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+      <h5>{{price}}</h5>
+      <p>Є в наявності</p>
+      <btn class="btn btn-primary" href="{{buttons.[0].link}}">{{buttons.[0].text}}</btn>
+      <br>
+      <br>
+      <btn class="btn btn-secondary" href="{{buttons.[1].link}}">{{buttons.[1].text}}</btn>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        {{seller.title}}
+        <strong>{{seller.value}}</strong>
+      </div>
+    </div>
+   {{/with}}
+  {{/with}}
+  </div>
+  <br>
+  <br>
+  <hr>
+  <br>
+
+  
+    {{#each reviewList}}
+     <div class="card my-2">
+      <div class="card-body">
+        <div class="card">
+          <div class="card-body">
+          <strong>{{title.userName}}</strong>
+          <p>{{title.caption}}</p>
+          <p>{{title.date}}</p>
+          <hr>
+          {{#with reviewBody}}
+          {{seller.title}}
+          {{seller.value}}
+          <br>
+          <br>
+          {{rating.title}}
+          {{rating.value}}
+          <br>
+          <br>
+          {{#with text}}
+          {{this}}
+          {{/with}}
+          <br>
+          <br>
+          <strong>{{advantages.title}}</strong>
+          <p>{{advantages.text}}</p>
+          <br>
+          <strong>{{disadvantages.title}}</strong>
+          <p>{{disadvantages.text}}</p>
+          {{#each images}}
+          
+          <img class="col-2" src="{{this}}" alt="Product photo">
+          
+          {{/each}}
+          {{#each coments}}
+          <div class="card my-4">
+            <div class="card-body">
+            <strong>{{userName}}</strong>
+            <p>{{date}}</p>
+            <p>{{text}}</p>
+            </div>
+          </div>
+          {{/each}}
+          {{/with}}
+          </div>
+        </div> 
+      </div>
+    </div> 
+    
+    {{/each}}
+
+     <div class="alert alert-success">
+        <h2 class="text-center">{{service.title}}</h2>
+        <p class="text-center">{{service.description}}</p>
+        <btn class="btn btn-primary" href="{{service.button.[0].link}}">{{service.buttons.[0].text}}</btn>
+        </div> 
+
+        <hr>
+
+        {{#each footer}}
+   <div class="nav col-2">
+    <div>
+      {{#each this}}
+       <div>
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+       </div>
+      {{/each}}
+    </div>
+   </div>
+  {{/each}}
+  
+  
+</div>
+</div>
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
