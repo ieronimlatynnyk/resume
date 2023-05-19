@@ -98,7 +98,7 @@
         <btn class="btn btn-outline-dark" href="{{button.link}}">{{button.text}}</btn>
         {{/with}}
         <hr>
-        {{#with filterList}}
+        {{#each filterList}}
         <p>{{title}}</p>
         {{#each options}}
         <div class="form-check">
@@ -106,12 +106,67 @@
             <input name="food" type="checkbox" class="form-check-input">
         </div>
         {{/each}}
+        <hr>
+        {{/each}}
         {{/with}}
-        {{/with}}
+        
         </div>
       </div>
     </div>
 
+    <div class="col-8">
+      {{#each goodsList}}
+       <div class="card col-6">
+    <img class="card-img-top" src="https://picsum.photos/1000/500" alt="Product photo">
+    <span class="badge text-bg-warning rounded-pill text-uppercase col-2 mx-2 my-1">{{#if isHot}}<div>Hot</div> {{/if}}</span>
+     <span class="badge text-bg-primary rounded-pill text-uppercase col-2 mx-2 my-1">{{#if isNew}}<div>New</div> {{/if}}</span>
+      <span class="badge text-bg-success text-uppercase col-2 mx-2 my-1">{{#if isFast}}<div>Fast</div> {{/if}}</span>
+       <span class="badge text-bg-secondary text-uppercase col-2 mx-2 my-1">{{#if isFree}}<div>free</div> {{/if}}</span>
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+      <p>{{review.amount}} {{review.text}}</p>
+      <h5>{{price}}</h5>
+      <p>{{delivery}}</p>
+      
+      <a href="{{buttons.[0].link}}" class="btn btn-primary">{{buttons.[0].text}}</a>
+      <a href="{{buttons.[1].link}}" class="btn btn-secondary">{{buttons.[1].text}}</a>
+      {{#each characteristics}}
+      <ul>
+        <li>{{title}} {{value}}</li>
+      </ul>
+      {{/each}}
+    </div>
+   </div>
+      {{/each}}
+    </div>
+    <br>
+    <br>
+
+  </div>
+  <div class="alert alert-success">
+  {{#with service}}
+  <h2 class="text-center">{{title}}</h2>
+  <p class="text-center">{{description}}</p>
+  {{#each buttons}}
+  <btn class="btn btn-primary text-center" href="{{link}}">{{text}}</btn>
+  {{/each}}
+  {{/with}}
+  </div>
+  </div>
+  <br>
+  <hr>
+   <div class="row">
+  {{#each footer}}
+   <div class="nav col-2">
+    <div>
+      {{#each this}}
+       <div>
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+       </div>
+      {{/each}}
+    </div>
+   </div>
+  {{/each}}
   </div>
 </div>
 
