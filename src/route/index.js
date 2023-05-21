@@ -3359,6 +3359,15 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+router.get('/index8', function (req, res) {
+
+  res.render('index8', {
+
+    layout: 'index',
+  }
+  )}
+)
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router
