@@ -5,13 +5,16 @@
 
 <div class="m-4">
   {{#with navigation}}
-     <div class="card">
+  
+    <div class='card'>
+      <div class="row">
       {{#each links}}
-      <div class="card-body">
-        <a href="{{href}}" class="nav-link">{{text}}</a>
+        <div class='card-body col-2'>
+          <a href='{{href}}' class='nav-link'>{{text}}</a>
         </div>
-  {{/each}}
-  </div>
+      {{/each}} 
+    </div>
+    </div>
   {{/with}}
   <div class="row">
     <div class="col-8">

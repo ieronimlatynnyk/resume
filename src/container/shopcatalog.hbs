@@ -5,15 +5,18 @@
 
 <div class='m-4'>
   <div class='row'>
-    {{#with navigation}}
-      <div class='card col-12'>
-        {{#each links}}
-          <div class='card-body'>
-            <a href='{{href}}' class='nav-link'>{{text}}</a>
-          </div>
-        {{/each}}
-      </div>
-    {{/with}}
+     {{#with navigation}}
+  
+    <div class='card'>
+      <div class="row">
+      {{#each links}}
+        <div class='card-body col-2'>
+          <a href='{{href}}' class='nav-link'>{{text}}</a>
+        </div>
+      {{/each}} 
+    </div>
+    </div>
+  {{/with}}
     <br />
     <br />
 
