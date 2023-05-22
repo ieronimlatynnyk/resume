@@ -3359,9 +3359,9 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
-router.get('/index8', function (req, res) {
+router.get('/index', function (req, res) {
 
-  res.render('index8', {
+  res.render('index', {
 
     layout: 'index',
   }
