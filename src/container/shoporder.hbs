@@ -260,16 +260,15 @@
   {{/with}}
   {{/with}}
   <hr>
+  
   {{#each footer}}
-  <div class=" m-3 ">
-    <a class="list-group">
+   <div class="nav">
       {{#each this}}
-       <a class="list-group-item-disabled">{{text}}</a>
-       {{else}}
-       <a class="list-group-item" href="link">{{text}}</a>
+       <div>
+        <a class="nav-link" href="{{link}}">{{text}}</a>
+       </div>
       {{/each}}
-    </a>
-  </div>
+   </div>
   {{/each}}
   
   </div> 
